@@ -12,15 +12,16 @@ description: Svelte 5 runes guidance. Use for reactive state, props, effects, or
 **Which rune?** Props: `$props()` | Bindable: `$bindable()` |
 Computed: `$derived()` | Side effect: `$effect()` | State: `$state()`
 
-**Key rules:** Runes are top-level only. $derived is read-only. Don't
-mix Svelte 4/5 syntax. Objects/arrays are shallow reactive.
+**Key rules:** Runes are top-level only. $derived can be overridden
+(use `const` for read-only). Don't mix Svelte 4/5 syntax.
+Objects/arrays are deeply reactive by default.
 
 ## Example
 
 ```svelte
 <script>
 	let count = $state(0); // Mutable state
-	let doubled = $derived(count * 2); // Computed (read-only)
+	const doubled = $derived(count * 2); // Computed (const = read-only)
 
 	$effect(() => {
 		console.log(`Count is ${count}`); // Side effect
@@ -53,6 +54,9 @@ mix Svelte 4/5 syntax. Objects/arrays are shallow reactive.
 - Event handlers: Use `onclick` not `on:click` in Svelte 5
 - Children: Use `{@render children()}` in layouts
 - Check Svelte version before suggesting syntax
+- **Svelte 5.25+ breaking change:** `$derived` can now be reassigned
+  (use `const` for read-only)
+- **Last verified:** 2025-01-11
 
 <!--
 PROGRESSIVE DISCLOSURE GUIDELINES:

@@ -31,9 +31,12 @@
 
 ---
 
-### 2. Reassigning $derived Values ❌
+### 2. Reassigning $derived Values ⚠️
 
-**WRONG:**
+**Note:** As of Svelte 5.25+, `$derived` CAN be reassigned, but will
+recalculate when dependencies change.
+
+**CONFUSING (works but not recommended):**
 
 ```svelte
 <script>
@@ -41,17 +44,17 @@
 	let doubled = $derived(count * 2);
 
 	function reset() {
-		doubled = 0; // ERROR - $derived is read-only!
+		doubled = 0; // Temporarily overrides, but recalculates when count changes
 	}
 </script>
 ```
 
-**RIGHT:**
+**CLEARER - Use const for read-only:**
 
 ```svelte
 <script>
 	let count = $state(0);
-	let doubled = $derived(count * 2);
+	const doubled = $derived(count * 2); // const = truly read-only
 
 	function reset() {
 		count = 0; // Update source, derived updates automatically
@@ -59,7 +62,8 @@
 </script>
 ```
 
-**Why:** `$derived` is read-only. Update the source state instead.
+**Why:** While reassignment is allowed, it's clearer to update the
+source state. Use `const` to enforce read-only behavior.
 
 ---
 
@@ -95,7 +99,7 @@
 ```svelte
 <script>
 	import { untrack } from 'svelte';
-	
+
 	let count = $state(0);
 
 	$effect(() => {
@@ -107,8 +111,9 @@
 </script>
 ```
 
-**Why:** `$effect` runs when any accessed `$state` changes. Updating that
-state creates a loop. Use `untrack()` to read state without creating a dependency.
+**Why:** `$effect` runs when any accessed `$state` changes. Updating
+that state creates a loop. Use `untrack()` to read state without
+creating a dependency.
 
 ---
 
@@ -168,7 +173,8 @@ classes for encapsulation.
 <p>{user.profile.name}</p> <!-- Will update correctly -->
 ```
 
-**Why:** `$state()` creates deep reactive proxies by default. Nested mutations trigger updates.
+**Why:** `$state()` creates deep reactive proxies by default. Nested
+mutations trigger updates.
 
 **When to use $state.raw() instead:**
 
@@ -176,13 +182,14 @@ classes for encapsulation.
 <script>
 	// For large, immutable data structures where you don't need reactivity
 	let config = $state.raw(hugeConfigObject); // Skip deep proxy overhead for performance
-	
+
 	// For data you'll fully replace, not mutate
 	let apiResponse = $state.raw(data); // Will replace entire object later
 </script>
 ```
 
-**Why:** Use `$state.raw()` for **performance optimization** when you don't need deep reactivity, not because deep reactivity doesn't work.
+**Why:** Use `$state.raw()` for **performance optimization** when you
+don't need deep reactivity, not because deep reactivity doesn't work.
 
 ---
 
@@ -340,7 +347,8 @@ directives.
 
 ## Array and Object Mutations Work!
 
-Svelte 5 has **deep reactivity** - array and object mutations trigger updates:
+Svelte 5 has **deep reactivity** - array and object mutations trigger
+updates:
 
 ### Arrays - All Methods Work
 
@@ -374,7 +382,8 @@ Svelte 5 has **deep reactivity** - array and object mutations trigger updates:
 </script>
 ```
 
-**All mutations trigger UI updates** because `$state()` creates deep proxies.
+**All mutations trigger UI updates** because `$state()` creates deep
+proxies.
 
 ## Performance Mistakes
 
@@ -411,11 +420,13 @@ Svelte 5 has **deep reactivity** - array and object mutations trigger updates:
 ```
 
 **Use $state.raw() when:**
+
 - Data is large and immutable
 - You'll replace entire object, not mutate it
 - Performance is critical
 
 **Don't use $state.raw() when:**
+
 - You need to mutate nested properties
 - Data is small/medium sized
 

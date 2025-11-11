@@ -60,6 +60,7 @@ export const actions = {
 - ALWAYS rethrow redirects/errors: `throw redirect()`, `throw error()`
 - Don't return class instances or functions from server load (not
   serializable)
+- **Last verified:** 2025-01-11
 
 <!--
 PROGRESSIVE DISCLOSURE GUIDELINES:

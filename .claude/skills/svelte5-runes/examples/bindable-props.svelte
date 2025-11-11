@@ -64,7 +64,8 @@
 		<h3>Creating Bindable Components</h3>
 
 		<h4>1. TextInput Component (with $bindable)</h4>
-		<pre><code>&lt;!-- TextInput.svelte --&gt;
+		<pre><code
+				>&lt;!-- TextInput.svelte --&gt;
 &lt;script lang="ts"&gt;
   interface Props &#123;
     value?: string;
@@ -80,10 +81,12 @@
 &lt;/label&gt;
 
 &lt;!-- Usage --&gt;
-&lt;TextInput bind:value=&#123;name&#125; label="Name" /&gt;</code></pre>
+&lt;TextInput bind:value=&#123;name&#125; label="Name" /&gt;</code
+			></pre>
 
 		<h4>2. Counter Component (callback pattern - no $bindable)</h4>
-		<pre><code>&lt;!-- Counter.svelte --&gt;
+		<pre><code
+				>&lt;!-- Counter.svelte --&gt;
 &lt;script lang="ts"&gt;
   interface Props &#123;
     count: number;
@@ -96,7 +99,8 @@
 &lt;button onclick=&#123;onIncrement&#125;&gt;Count: &#123;count&#125;&lt;/button&gt;
 
 &lt;!-- Usage --&gt;
-&lt;Counter &#123;count&#125; onIncrement=&#123;() =&gt; count++&#125; /&gt;</code></pre>
+&lt;Counter &#123;count&#125; onIncrement=&#123;() =&gt; count++&#125; /&gt;</code
+			></pre>
 
 		<h4>When to Use $bindable</h4>
 		<ul>

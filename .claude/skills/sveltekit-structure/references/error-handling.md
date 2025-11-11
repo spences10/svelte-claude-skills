@@ -2,7 +2,8 @@
 
 ## Error Boundary Placement
 
-**Key rule:** `+error.svelte` must be _above_ the failing route in the hierarchy.
+**Key rule:** `+error.svelte` must be _above_ the failing route in the
+hierarchy.
 
 ```
 src/routes/
@@ -56,8 +57,7 @@ src/routes/
 	import { page } from '$app/stores';
 </script>
 
-<h1>{$page.status}</h1>
-<p>{$page.error.message}</p>
+<h1>{$page.status}</h1><p>{$page.error.message}</p>
 ```
 
 ## Custom Error Data
@@ -134,6 +134,7 @@ export const load = async ({ params }) => {
 ## Error in Layout vs Page
 
 **Layout error:**
+
 ```typescript
 // src/routes/dashboard/+layout.server.ts
 export const load = async ({ locals }) => {
@@ -145,6 +146,7 @@ export const load = async ({ locals }) => {
 ```
 
 **Page error:**
+
 ```typescript
 // src/routes/dashboard/settings/+page.server.ts
 export const load = async () => {
@@ -155,6 +157,7 @@ export const load = async () => {
 ## Expected Errors vs Unexpected Errors
 
 **Expected (use error()):**
+
 ```typescript
 // User requests invalid resource
 if (!post) throw error(404, 'Post not found');
@@ -164,6 +167,7 @@ if (post.authorId !== user.id) throw error(403, 'Not your post');
 ```
 
 **Unexpected (let it bubble):**
+
 ```typescript
 // Unhandled exceptions (DB connection fails, etc.)
 // Will show generic 500 error
@@ -179,11 +183,11 @@ import type { HandleServerError } from '@sveltejs/kit';
 export const handleError: HandleServerError = ({ error, event }) => {
 	// Log to error tracking service
 	console.error('Error:', error, 'Path:', event.url.pathname);
-	
+
 	// Return user-friendly message (don't expose internals)
 	return {
 		message: 'An unexpected error occurred',
-		code: error?.code ?? 'UNKNOWN'
+		code: error?.code ?? 'UNKNOWN',
 	};
 };
 ```
@@ -191,6 +195,7 @@ export const handleError: HandleServerError = ({ error, event }) => {
 ## Error in Load vs Error in Component
 
 **Load function error (recommended):**
+
 ```typescript
 // +page.server.ts
 export const load = async ({ params }) => {
@@ -201,11 +206,12 @@ export const load = async ({ params }) => {
 ```
 
 **Component error (not ideal):**
+
 ```svelte
 <!-- +page.svelte - Don't do this -->
 <script>
 	export let data;
-	
+
 	// If data.user is undefined, component just shows nothing
 	// No error boundary triggered
 </script>
@@ -213,7 +219,8 @@ export const load = async ({ params }) => {
 <h1>{data.user.name}</h1> <!-- Might crash if user undefined -->
 ```
 
-**Best practice:** Validate and throw errors in `load` functions, not components.
+**Best practice:** Validate and throw errors in `load` functions, not
+components.
 
 ## Fallback Error Handling
 
@@ -248,7 +255,7 @@ export const load = async ({ url }) => {
 	if (url.searchParams.has('test-error')) {
 		throw error(500, 'Test error');
 	}
-	
+
 	return {};
 };
 ```

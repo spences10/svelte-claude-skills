@@ -59,6 +59,7 @@ src/routes/
 - Error boundaries (+error.svelte) must be _above_ failing route
 - Use `(groups)` for layout organization without affecting URL
 - Check `browser` from `$app/environment` for client-only code
+- **Last verified:** 2025-01-11
 
 <!--
 PROGRESSIVE DISCLOSURE GUIDELINES:

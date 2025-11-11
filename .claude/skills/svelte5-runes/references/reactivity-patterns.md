@@ -30,8 +30,10 @@
 **Key points:**
 
 - Must be top-level in component
-- Objects/arrays are **deeply reactive** by default - nested mutations trigger updates
-- Mutate nested properties directly: `user.profile.age = 31` ✅ (works!)
+- Objects/arrays are **deeply reactive** by default - nested mutations
+  trigger updates
+- Mutate nested properties directly: `user.profile.age = 31` ✅
+  (works!)
 - Reassigning also works: `user = { ...user, name: 'Bo' }` ✅
 
 ## $derived - Computed Values
@@ -52,7 +54,10 @@
 
 **Key points:**
 
-- **READ-ONLY** - Cannot reassign
+- **Can be overridden** - Reassignment allowed (but will recalculate
+  on dependency change)
+- Use `const` to make truly read-only:
+  `const doubled = $derived(count * 2)`
 - Auto-tracks dependencies
 - Use `$derived.by()` for multi-line logic
 - Lazy - only computes when accessed
@@ -170,19 +175,33 @@
 </script>
 ```
 
-### ❌ Reassigning $derived
+### ⚠️ Reassigning $derived (Svelte 5.25+)
 
 ```svelte
-<!-- WRONG -->
+<!-- WORKS but may be confusing -->
 <script>
 	let count = $state(0);
 	let doubled = $derived(count * 2);
 
 	function reset() {
-		doubled = 0; // ERROR - $derived is read-only!
+		doubled = 0; // Temporarily overrides, but recalculates when count changes
+	}
+</script>
+
+<!-- CLEARER - Use const to prevent reassignment -->
+<script>
+	let count = $state(0);
+	const doubled = $derived(count * 2); // const = truly read-only
+
+	function reset() {
+		// doubled = 0; // TypeScript error - cannot reassign const
 	}
 </script>
 ```
+
+**Note:** As of Svelte 5.25+, `$derived` values CAN be reassigned, but
+they'll recalculate when dependencies change. Use `const` to make them
+truly read-only.
 
 ### ❌ Infinite loops in $effect
 
@@ -211,29 +230,32 @@
 
 ## Performance: $state vs $state.raw
 
-Use `$state.raw()` for **performance optimization** when you don't need reactivity:
+Use `$state.raw()` for **performance optimization** when you don't
+need reactivity:
 
 ```svelte
 <script>
-  // Large immutable config (never changes)
-  let config = $state.raw(hugeConfigObject);  // No proxy overhead
+	// Large immutable config (never changes)
+	let config = $state.raw(hugeConfigObject); // No proxy overhead
 
-  // Data you'll replace entirely, not mutate
-  let apiData = $state.raw(data);
-  // Later: apiData = newData; (full replacement)
+	// Data you'll replace entirely, not mutate
+	let apiData = $state.raw(data);
+	// Later: apiData = newData; (full replacement)
 
-  // If you WILL mutate nested properties, use $state:
-  let user = $state({ profile: { name: 'Alex' } });
-  user.profile.name = 'Bo';  // Works with deep reactivity
+	// If you WILL mutate nested properties, use $state:
+	let user = $state({ profile: { name: 'Alex' } });
+	user.profile.name = 'Bo'; // Works with deep reactivity
 </script>
 ```
 
 **When to use $state.raw():**
+
 - Large, immutable data structures (config, constants)
 - Data you'll fully replace, not incrementally mutate
 - Performance-critical scenarios where proxies are expensive
 
 **When NOT to use $state.raw():**
+
 - You need to mutate the object and see UI updates
 - Data structures are small/medium sized
 

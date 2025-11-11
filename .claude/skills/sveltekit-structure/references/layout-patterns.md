@@ -14,6 +14,7 @@
 ```
 
 **Key points:**
+
 - Must declare `children` in `$props()`
 - Use `{@render children()}` to render nested content
 - Root layout wraps ALL pages
@@ -33,6 +34,7 @@ src/routes/
 **Result:** Root layout wraps dashboard layout wraps page.
 
 **Rendering order:**
+
 ```
 Root +layout.svelte
   └─ Dashboard +layout.svelte
@@ -66,20 +68,20 @@ Root +layout.svelte
 ```
 
 ```svelte
-<!-- src/routes/dashboard/+page.svelte -->
-<h1>Dashboard Home</h1>
+<!-- src/routes/dashboard/+page.svelte --><h1>Dashboard Home</h1>
 ```
 
 **Rendered HTML structure:**
+
 ```html
 <div class="app">
-  <nav>Global Nav</nav>
-  <div class="dashboard">
-    <aside>Dashboard Sidebar</aside>
-    <main>
-      <h1>Dashboard Home</h1>
-    </main>
-  </div>
+	<nav>Global Nav</nav>
+	<div class="dashboard">
+		<aside>Dashboard Sidebar</aside>
+		<main>
+			<h1>Dashboard Home</h1>
+		</main>
+	</div>
 </div>
 ```
 
@@ -101,6 +103,7 @@ src/routes/
 ```
 
 **Key points:**
+
 - Parentheses make groups invisible in URLs
 - `/about` route, NOT `/(marketing)/about`
 - Different layouts for different sections
@@ -222,7 +225,7 @@ export const load = async ({ locals }) => {
 	if (!locals.user) {
 		throw redirect(303, '/login');
 	}
-	
+
 	return {
 		user: locals.user,
 	};
@@ -238,7 +241,7 @@ All routes under `(app)` group now require authentication.
 <script>
 	import { setContext } from 'svelte';
 	let { children, data } = $props();
-	
+
 	// Share state with all descendant components
 	setContext('user', data.user);
 </script>
@@ -329,7 +332,7 @@ src/routes/
 	{#if $navigating}
 		<div class="loading-bar"></div>
 	{/if}
-	
+
 	{@render children()}
 </div>
 
@@ -364,7 +367,7 @@ src/routes/
 <script>
 	import { page } from '$app/stores';
 	let { children } = $props();
-	
+
 	$effect(() => {
 		console.log('Current route:', $page.url.pathname);
 		console.log('Layout data:', $page.data);
