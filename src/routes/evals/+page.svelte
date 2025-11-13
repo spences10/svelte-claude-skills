@@ -32,7 +32,7 @@
 		loading_models = true;
 		try {
 			console.log('Fetching available models...');
-			const models = await fetch_available_models();
+			const models = await fetch_available_models(undefined);
 			console.log('Fetched models:', models);
 			available_models = models;
 		} catch (error) {
@@ -152,7 +152,7 @@
 					{/each}
 				{/if}
 			</select>
-			<label class="label">
+			<div class="label">
 				<span class="label-text-alt">
 					{#if loading_models}
 						Fetching available models from API...
@@ -161,7 +161,7 @@
 						models
 					{/if}
 				</span>
-			</label>
+			</div>
 		</div>
 		<!-- Debug info -->
 		<details class="mt-4">
