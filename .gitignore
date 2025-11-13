@@ -24,3 +24,5 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 *.db*
+
+test-bed/

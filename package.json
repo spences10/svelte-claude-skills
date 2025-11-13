@@ -14,7 +14,8 @@
 		"lint": "prettier --check . && eslint .",
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run && npm run test:e2e",
-		"test:e2e": "playwright test"
+		"test:e2e": "playwright test",
+		"prep:test-bed": "rm -rf test-bed && pnpx sv create test-bed --template minimal && cp -r .claude test-bed/"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.4.0",
