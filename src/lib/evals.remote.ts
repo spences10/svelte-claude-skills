@@ -49,6 +49,7 @@ export interface QualityTestResult {
 	missing_facts: string[];
 	forbidden_content: string[];
 	response_preview: string;
+	response_full_text?: string;
 	error?: string;
 	logs: string[];
 	metrics?: {
@@ -71,6 +72,7 @@ const activation_test_schema = v.object({
 		v.literal('svelte5-runes'),
 		v.literal('sveltekit-data-flow'),
 		v.literal('sveltekit-structure'),
+		v.literal('sveltekit-remote-functions'),
 	]),
 	should_activate: v.boolean(),
 	description: v.string(),
@@ -83,6 +85,7 @@ const quality_test_schema = v.object({
 		v.literal('svelte5-runes'),
 		v.literal('sveltekit-data-flow'),
 		v.literal('sveltekit-structure'),
+		v.literal('sveltekit-remote-functions'),
 	]),
 	query: v.string(),
 	expected_facts: v.optional(v.array(v.string())),
@@ -366,6 +369,7 @@ export const test_response_quality = command(
 				missing_facts,
 				forbidden_content,
 				response_preview: response_text.substring(0, 200),
+				response_full_text: response_text,
 				error: undefined,
 				logs,
 				metrics: {
@@ -451,16 +455,22 @@ export const run_activation_tests = command(
 
 		for (let i = 0; i < test_cases.length; i++) {
 			console.log(`\n[RUN TESTS] Test ${i + 1}/${test_cases.length}`);
-			const result = await test_skill_activation(test_cases[i]);
+			const test_case = test_cases[i];
+			const result = await test_skill_activation(test_case);
 			results.push(result);
 
 			// Store result in database
 			if (run_id) {
 				try {
-					await store_activation_result({ run_id, result });
+					await store_activation_result({
+						run_id,
+						result,
+						query: test_case.query,
+						should_activate: test_case.should_activate,
+					});
 				} catch (error) {
 					console.error(
-						`[RUN TESTS] Failed to store result for test ${test_cases[i].id}:`,
+						`[RUN TESTS] Failed to store result for test ${test_case.id}:`,
 						error,
 					);
 				}
@@ -586,6 +596,7 @@ export const run_quality_tests = command(
 						result,
 						query: test_case.query,
 						skill: test_case.skill,
+						response_full_text: result.response_full_text,
 					});
 				} catch (error) {
 					console.error(

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import {
-		test_response_quality,
-		test_skill_activation,
+		run_activation_tests,
+		run_quality_tests,
 		type ActivationTestResult,
 		type QualityTestResult,
 	} from '$lib/evals.remote';
@@ -82,19 +82,19 @@
 					)
 				: activation_tests;
 
-		for (let i = 0; i < tests_to_run.length; i++) {
-			current_test = `Running activation test ${i + 1}/${tests_to_run.length}: ${tests_to_run[i].id}`;
-			try {
-				const result = await test_skill_activation({
-					...tests_to_run[i],
-					model: selected_model,
-				});
-				activation_results = [...activation_results, result];
-				current_logs = [...current_logs, ...result.logs];
-			} catch (error) {
-				console.error('Error running test:', error);
-				current_logs = [...current_logs, `Error: ${error}`];
-			}
+		current_test = `Running ${tests_to_run.length} activation tests...`;
+
+		try {
+			// Call batch runner which handles DB storage
+			const results = await run_activation_tests(
+				tests_to_run.map((t) => ({ ...t, model: selected_model })),
+			);
+			activation_results = results;
+			// Aggregate logs from all results
+			current_logs = results.flatMap((r) => r.logs);
+		} catch (error) {
+			console.error('Error running tests:', error);
+			current_logs = [`Error: ${error}`];
 		}
 
 		is_running = false;
@@ -114,19 +114,19 @@
 					)
 				: qualityTests;
 
-		for (let i = 0; i < tests_to_run.length; i++) {
-			current_test = `Running quality test ${i + 1}/${tests_to_run.length}: ${tests_to_run[i].id}`;
-			try {
-				const result = await test_response_quality({
-					...tests_to_run[i],
-					model: selected_model,
-				});
-				quality_results = [...quality_results, result];
-				current_logs = [...current_logs, ...result.logs];
-			} catch (error) {
-				console.error('Error running test:', error);
-				current_logs = [...current_logs, `Error: ${error}`];
-			}
+		current_test = `Running ${tests_to_run.length} quality tests...`;
+
+		try {
+			// Call batch runner which handles DB storage
+			const results = await run_quality_tests(
+				tests_to_run.map((t) => ({ ...t, model: selected_model })),
+			);
+			quality_results = results;
+			// Aggregate logs from all results
+			current_logs = results.flatMap((r) => r.logs);
+		} catch (error) {
+			console.error('Error running tests:', error);
+			current_logs = [`Error: ${error}`];
 		}
 
 		is_running = false;

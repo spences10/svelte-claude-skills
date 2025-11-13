@@ -119,31 +119,44 @@ export const store_activation_result = command(
 	v.object({
 		run_id: v.string(),
 		result: v.any(), // ActivationTestResult type
+		query: v.optional(v.string()),
+		should_activate: v.optional(v.boolean()),
+		test_case_source: v.optional(v.string()),
+		session_context: v.optional(v.string()),
 	}),
-	async ({ run_id, result }): Promise<void> => {
+	async ({
+		run_id,
+		result,
+		query,
+		should_activate,
+		test_case_source,
+		session_context,
+	}): Promise<void> => {
 		const result_id = randomUUID();
 		const r = result as ActivationTestResult;
 
 		const stmt = db.prepare(`
 			INSERT INTO activation_results (
 				id, run_id, test_id, query, expected_skill, activated_skill,
-				should_activate, passed, error,
+				should_activate, passed, error, test_case_source, session_context,
 				input_tokens, output_tokens, cache_creation_tokens, cache_read_tokens, thinking_tokens,
 				latency_ms, estimated_cost_usd, created_at
 			)
-			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 		`);
 
 		stmt.run(
 			result_id,
 			run_id,
 			r.test_id,
-			'', // Query not in result interface, would need to add
+			query || '',
 			r.expected_skill,
 			r.activated_skill,
-			1, // should_activate not in result, assume true
+			should_activate !== undefined ? (should_activate ? 1 : 0) : 1,
 			r.passed ? 1 : 0,
 			r.error || null,
+			test_case_source || 'synthetic',
+			session_context || null,
 			r.metrics?.input_tokens || null,
 			r.metrics?.output_tokens || null,
 			r.metrics?.cache_creation_tokens || null,
@@ -177,18 +190,30 @@ export const store_quality_result = command(
 		result: v.any(), // QualityTestResult type
 		query: v.string(),
 		skill: v.string(),
+		response_full_text: v.optional(v.string()),
+		test_case_source: v.optional(v.string()),
+		session_context: v.optional(v.string()),
 	}),
-	async ({ run_id, result, query, skill }): Promise<void> => {
+	async ({
+		run_id,
+		result,
+		query,
+		skill,
+		response_full_text,
+		test_case_source,
+		session_context,
+	}): Promise<void> => {
 		const result_id = randomUUID();
 		const r = result as QualityTestResult;
 
 		const stmt = db.prepare(`
 			INSERT INTO quality_results (
-				id, run_id, test_id, skill, query, response_preview, passed, error,
+				id, run_id, test_id, skill, query, response_preview, response_full_text,
+				passed, error, test_case_source, session_context,
 				input_tokens, output_tokens, cache_creation_tokens, cache_read_tokens, thinking_tokens,
 				latency_ms, estimated_cost_usd, created_at
 			)
-			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 		`);
 
 		stmt.run(
@@ -198,8 +223,11 @@ export const store_quality_result = command(
 			skill,
 			query,
 			r.response_preview,
+			response_full_text || null,
 			r.passed ? 1 : 0,
 			r.error || null,
+			test_case_source || 'synthetic',
+			session_context || null,
 			r.metrics?.input_tokens || null,
 			r.metrics?.output_tokens || null,
 			r.metrics?.cache_creation_tokens || null,

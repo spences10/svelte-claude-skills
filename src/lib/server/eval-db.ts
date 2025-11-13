@@ -1,5 +1,5 @@
 import Database from 'better-sqlite3';
-import { mkdirSync, readFileSync } from 'node:fs';
+import { mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { get_eval_database_path } from './eval-db-path';
 
@@ -18,17 +18,6 @@ eval_db.pragma('foreign_keys = ON'); // Enforce referential integrity
 eval_db.pragma('journal_mode = WAL'); // Write-Ahead Logging for concurrency
 eval_db.pragma('busy_timeout = 5000'); // Wait 5s on database locks
 eval_db.pragma('synchronous = NORMAL'); // Balance durability/performance
-
-// Initialize schema if needed
-const schema_path = path.join(process.cwd(), 'eval-schema.sql');
-try {
-	const schema = readFileSync(schema_path, 'utf-8');
-	eval_db.exec(schema);
-	console.log('Eval database schema initialized successfully');
-} catch (error) {
-	console.error('Failed to initialize eval database schema:', error);
-	throw error;
-}
 
 // Graceful shutdown
 process.on('exit', () => {

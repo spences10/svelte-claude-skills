@@ -5,7 +5,8 @@
 export type SkillName =
 	| 'svelte5-runes'
 	| 'sveltekit-data-flow'
-	| 'sveltekit-structure';
+	| 'sveltekit-structure'
+	| 'sveltekit-remote-functions';
 
 export interface ActivationTestCase {
 	id: string;
@@ -153,9 +154,50 @@ export const activation_tests: ActivationTestCase[] = [
 		description: 'File naming should activate sveltekit-structure',
 	},
 
-	// Cross-skill queries - ensure correct skill activates
+	// sveltekit-remote-functions activations
 	{
 		id: 'act-016',
+		query: 'How do I use command() in SvelteKit?',
+		expected_skill: 'sveltekit-remote-functions',
+		should_activate: true,
+		description:
+			'command() query should activate sveltekit-remote-functions',
+	},
+	{
+		id: 'act-017',
+		query: 'How do I create a remote function with query()?',
+		expected_skill: 'sveltekit-remote-functions',
+		should_activate: true,
+		description: 'query() should activate sveltekit-remote-functions',
+	},
+	{
+		id: 'act-018',
+		query: 'What are .remote.ts files in SvelteKit?',
+		expected_skill: 'sveltekit-remote-functions',
+		should_activate: true,
+		description:
+			'.remote.ts should activate sveltekit-remote-functions',
+	},
+	{
+		id: 'act-019',
+		query: 'How do I call server functions from a Svelte component?',
+		expected_skill: 'sveltekit-remote-functions',
+		should_activate: true,
+		description:
+			'Server functions should activate sveltekit-remote-functions',
+	},
+	{
+		id: 'act-020',
+		query: 'How do I validate input in remote functions?',
+		expected_skill: 'sveltekit-remote-functions',
+		should_activate: true,
+		description:
+			'Remote function validation should activate sveltekit-remote-functions',
+	},
+
+	// Cross-skill queries - ensure correct skill activates
+	{
+		id: 'act-021',
 		query: 'How do I use $state in a form action?',
 		expected_skill: 'svelte5-runes',
 		should_activate: true,
@@ -163,7 +205,7 @@ export const activation_tests: ActivationTestCase[] = [
 			'$state is primary topic, should activate svelte5-runes',
 	},
 	{
-		id: 'act-017',
+		id: 'act-022',
 		query: 'How do I load data for my Svelte 5 component?',
 		expected_skill: 'sveltekit-data-flow',
 		should_activate: true,
@@ -278,6 +320,52 @@ export const qualityTests: QualityTestCase[] = [
 		query: 'Do layout groups affect the URL?',
 		expected_facts: ['do not', '(groups)', 'URL'],
 		description: 'Layout groups (parentheses) do not affect URL',
+	},
+
+	// sveltekit-remote-functions quality tests
+	{
+		id: 'qual-013',
+		skill: 'sveltekit-remote-functions',
+		query: 'Can I return a class instance from command()?',
+		expected_facts: ['cannot', 'serialize', 'JSON'],
+		description: 'Remote functions must return serializable data',
+	},
+	{
+		id: 'qual-014',
+		skill: 'sveltekit-remote-functions',
+		query: 'What file extension should I use for remote functions?',
+		expected_facts: ['.remote.ts'],
+		description: 'Should mention .remote.ts naming convention',
+	},
+	{
+		id: 'qual-015',
+		skill: 'sveltekit-remote-functions',
+		query: 'How do I validate inputs in command()?',
+		expected_facts: ['schema', 'valibot', 'StandardSchemaV1'],
+		description:
+			'Should explain schema validation with StandardSchemaV1',
+	},
+	{
+		id: 'qual-016',
+		skill: 'sveltekit-remote-functions',
+		query: 'Can I access cookies in a remote function?',
+		expected_facts: ['getRequestEvent', 'cookies'],
+		description:
+			'Should mention getRequestEvent() for cookies access',
+	},
+	{
+		id: 'qual-017',
+		skill: 'sveltekit-remote-functions',
+		query: 'What is the difference between command() and query()?',
+		expected_facts: [
+			'command',
+			'writes',
+			'query',
+			'reads',
+			'batching',
+		],
+		description:
+			'Should explain command for writes, query for reads with batching',
 	},
 ];
 
