@@ -27,7 +27,7 @@
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.1.14",
 		"@types/better-sqlite3": "^7.6.13",
-		"@types/node": "^22",
+		"@types/node": "^24.0.0",
 		"@vitest/browser-playwright": "^4.0.5",
 		"better-sqlite3": "^12.4.1",
 		"daisyui": "^5.5.0",
