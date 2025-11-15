@@ -18,7 +18,7 @@
 		"prep:test-bed": "rm -rf test-bed && pnpx sv create test-bed --template minimal && cp -r .claude test-bed/"
 	},
 	"devDependencies": {
-		"@eslint/compat": "^1.4.0",
+		"@eslint/compat": "^2.0.0",
 		"@eslint/js": "^9.38.0",
 		"@playwright/test": "^1.56.1",
 		"@sveltejs/adapter-auto": "^7.0.0",
