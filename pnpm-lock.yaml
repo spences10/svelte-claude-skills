@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@anthropic-ai/claude-agent-sdk':
         specifier: ^0.1.37
-        version: 0.1.37(zod@3.25.76)
+        version: 0.1.42(zod@3.25.76)
     devDependencies:
       '@eslint/compat':
         specifier: ^1.4.0
@@ -108,8 +108,8 @@ importers:
 
 packages:
 
-  '@anthropic-ai/claude-agent-sdk@0.1.37':
-    resolution: {integrity: sha512-LMfqMIPLTz0vRhpcO7hpPJ5L6Bg24y5/PaqZvwAUNZ/GR3OAl7xmJR7IryIR6m8Pyd/6Hs2yBU8j86Os+wHFQQ==}
+  '@anthropic-ai/claude-agent-sdk@0.1.42':
+    resolution: {integrity: sha512-snz2CTHKxkk4rqgvi2D4oMgITXpgmghWC4XvFXcuYjSxgLCBmvDW9TjBk6MTv0apC5fwW4kLE4ydamkBs+BdPg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       zod: ^3.24.1
@@ -1866,7 +1866,7 @@ packages:
 
 snapshots:
 
-  '@anthropic-ai/claude-agent-sdk@0.1.37(zod@3.25.76)':
+  '@anthropic-ai/claude-agent-sdk@0.1.42(zod@3.25.76)':
     dependencies:
       zod: 3.25.76
     optionalDependencies:
