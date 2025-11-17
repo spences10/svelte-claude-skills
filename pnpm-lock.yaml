@@ -50,7 +50,7 @@ importers:
         version: 12.4.1
       daisyui:
         specifier: ^5.5.0
-        version: 5.5.0
+        version: 5.5.5
       eslint:
         specifier: ^9.38.0
         version: 9.39.1(jiti@2.6.1)
@@ -913,8 +913,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  daisyui@5.5.0:
-    resolution: {integrity: sha512-lfeimNM3U1FzjfBotV3iTrxNfBEncHs7kMP62lTLghmO99v7HVZ/lbcOLr/y0Q3JB6Lx7XEi2yC5RQ8BBxdKPA==}
+  daisyui@5.5.5:
+    resolution: {integrity: sha512-ekvI93ZkWIJoCOtDl0D2QMxnWvTejk9V5nWBqRv+7t0xjiBXqAK5U6o6JE2RPvlIC3EqwNyUoIZSdHX9MZK3nw==}
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -2581,7 +2581,7 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  daisyui@5.5.0: {}
+  daisyui@5.5.5: {}
 
   debug@4.4.3:
     dependencies:
