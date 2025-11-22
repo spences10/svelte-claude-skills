@@ -47,7 +47,7 @@ importers:
         version: 4.0.9(playwright@1.56.1)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.9)
       better-sqlite3:
         specifier: ^12.4.1
-        version: 12.4.1
+        version: 12.4.6
       daisyui:
         specifier: ^5.5.5
         version: 5.5.5
@@ -849,9 +849,9 @@ packages:
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
-  better-sqlite3@12.4.1:
-    resolution: {integrity: sha512-3yVdyZhklTiNrtg+4WqHpJpFDd+WHTg2oM7UcR80GqL05AOV0xEJzc6qNvFYoEtE+hRp1n9MpN6/+4yhlGkDXQ==}
-    engines: {node: 20.x || 22.x || 23.x || 24.x}
+  better-sqlite3@12.4.6:
+    resolution: {integrity: sha512-gaYt9yqTbQ1iOxLpJA8FPR5PiaHP+jlg8I5EX0Rs2KFwNzhBsF40KzMZS5FwelY7RG0wzaucWdqSAJM3uNCPCg==}
+    engines: {node: 20.x || 22.x || 23.x || 24.x || 25.x}
 
   bindings@1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
@@ -1348,8 +1348,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  node-abi@3.80.0:
-    resolution: {integrity: sha512-LyPuZJcI9HVwzXK1GPxWNzrr+vr8Hp/3UqlmWxxh8p54U1ZbclOqbSog9lWHaCX+dBaiGi6n/hIX+mKu74GmPA==}
+  node-abi@3.85.0:
+    resolution: {integrity: sha512-zsFhmbkAzwhTft6nd3VxcG0cvJsT70rL+BIGHWVq5fi6MwGrHwzqKaxXE+Hl2GmnGItnDKPPkO5/LQqjVkIdFg==}
     engines: {node: '>=10'}
 
   once@1.4.0:
@@ -2522,7 +2522,7 @@ snapshots:
 
   base64-js@1.5.1: {}
 
-  better-sqlite3@12.4.1:
+  better-sqlite3@12.4.6:
     dependencies:
       bindings: 1.5.0
       prebuild-install: 7.1.3
@@ -2990,7 +2990,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  node-abi@3.80.0:
+  node-abi@3.85.0:
     dependencies:
       semver: 7.7.3
 
@@ -3084,7 +3084,7 @@ snapshots:
       minimist: 1.2.8
       mkdirp-classic: 0.5.3
       napi-build-utils: 2.0.0
-      node-abi: 3.80.0
+      node-abi: 3.85.0
       pump: 3.0.3
       rc: 1.2.8
       simple-get: 4.0.1
