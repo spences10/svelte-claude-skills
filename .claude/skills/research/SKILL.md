@@ -2,7 +2,9 @@
 name: research
 # prettier-ignore
 description: Research topics by verifying actual source content. Use when asked to research or study links and documentation.
-allowed-tools: WebFetch, mcp__mcp-omnisearch__web_search, mcp__mcp-omnisearch__kagi_summarizer_process, Read, Grep, Bash, Task
+# prettier-ignore
+allowed-tools: WebFetch, mcp__mcp-omnisearch__web_search,
+  mcp__mcp-omnisearch__kagi_summarizer_process, Read, Grep, Bash, Task
 ---
 
 # Verified Research

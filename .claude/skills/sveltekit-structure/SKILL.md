@@ -2,7 +2,7 @@
 name: sveltekit-structure
 # IMPORTANT: Keep description on ONE line for Claude Code compatibility
 # prettier-ignore
-description: SvelteKit structure guidance. Use for routing, layouts, error handling, and SSR. Covers file naming (+page vs +layout vs +server), nested layouts, error boundaries, and hydration.
+description: SvelteKit structure guidance. Use for routing, layouts, error handling, SSR, or svelte:boundary. Covers file naming, nested layouts, error boundaries, pending UI, and hydration.
 ---
 
 # SvelteKit Structure
@@ -44,21 +44,22 @@ src/routes/
 
 ## Reference Files
 
-- [references/file-naming.md](references/file-naming.md) - File naming
+- [file-naming.md](references/file-naming.md) - File naming
   conventions
-- [references/layout-patterns.md](references/layout-patterns.md) -
-  Nested layouts
-- [references/error-handling.md](references/error-handling.md) - Error
-  boundary placement
-- [references/ssr-hydration.md](references/ssr-hydration.md) - SSR and
+- [layout-patterns.md](references/layout-patterns.md) - Nested layouts
+- [error-handling.md](references/error-handling.md) - +error.svelte
+  placement
+- [svelte-boundary.md](references/svelte-boundary.md) -
+  Component-level error/pending
+- [ssr-hydration.md](references/ssr-hydration.md) - SSR and
   browser-only code
 
 ## Notes
 
-- Layouts must render `{@render children()}` in Svelte 5
-- Error boundaries (+error.svelte) must be _above_ failing route
-- Use `(groups)` for layout organization without affecting URL
-- Check `browser` from `$app/environment` for client-only code
+- Layouts: `{@render children()}` | Errors: +error.svelte _above_
+  failing route
+- Groups: `(name)` folders don't affect URL | Client-only: check
+  `browser`
 - **Last verified:** 2025-01-11
 
 <!--

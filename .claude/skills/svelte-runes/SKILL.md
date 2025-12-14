@@ -1,11 +1,11 @@
 ---
-name: svelte5-runes
+name: svelte-runes
 # IMPORTANT: Keep description on ONE line for Claude Code compatibility
 # prettier-ignore
-description: Svelte 5 runes guidance. Use for reactive state, props, effects, or Svelte 4→5 migration. Covers $state, $derived, $effect, $props, $bindable. Prevents mixing syntaxes and reactivity mistakes.
+description: Svelte runes guidance. Use for reactive state, props, effects, attachments, or migration. Covers $state, $derived, $effect, @attach. Prevents reactivity mistakes.
 ---
 
-# Svelte 5 Runes
+# Svelte Runes
 
 ## Quick Start
 
@@ -35,27 +35,23 @@ Objects/arrays are deeply reactive by default.
 
 ## Reference Files
 
-**Before suggesting code, check these:**
-
-- [references/reactivity-patterns.md](references/reactivity-patterns.md) -
-  When to use each rune
-- [references/migration-gotchas.md](references/migration-gotchas.md) -
-  Svelte 4 → 5 translation
-- [references/component-api.md](references/component-api.md) -
-  $props,
-  $bindable patterns
-- [references/snippets-vs-slots.md](references/snippets-vs-slots.md) -
-  New snippet syntax
-- [references/common-mistakes.md](references/common-mistakes.md) -
-  Anti-patterns with fixes
+- [reactivity-patterns.md](references/reactivity-patterns.md) - When
+  to use each rune
+- [migration-gotchas.md](references/migration-gotchas.md) - Svelte 4→5
+  translation
+- [component-api.md](references/component-api.md) - $props, $bindable
+  patterns
+- [snippets-vs-slots.md](references/snippets-vs-slots.md) - New
+  snippet syntax
+- [common-mistakes.md](references/common-mistakes.md) - Anti-patterns
+  with fixes
+- [attachments.md](references/attachments.md) - @attach replaces use:
+  actions
 
 ## Notes
 
-- Event handlers: Use `onclick` not `on:click` in Svelte 5
-- Children: Use `{@render children()}` in layouts
-- Check Svelte version before suggesting syntax
-- **Svelte 5.25+ breaking change:** `$derived` can now be reassigned
-  (use `const` for read-only)
+- Use `onclick` not `on:click`, `{@render children()}` in layouts
+- `$derived` can be reassigned (5.25+) - use `const` for read-only
 - **Last verified:** 2025-01-11
 
 <!--

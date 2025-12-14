@@ -67,7 +67,46 @@ source state. Use `const` to enforce read-only behavior.
 
 ---
 
-### 3. Creating Infinite Loops in $effect ❌
+### 3. Optional Chaining Breaks Effect Reactivity ❌
+
+**WRONG:**
+
+```svelte
+<script>
+	let particles = $state(undefined);
+	let scheme = $state('dark');
+
+	$effect(() => {
+		// If particles is undefined, scheme is NEVER read!
+		// Effect won't re-run when scheme changes
+		particles?.updateScheme(scheme);
+	});
+</script>
+```
+
+**RIGHT:**
+
+```svelte
+<script>
+	let particles = $state(undefined);
+	let scheme = $state('dark');
+
+	$effect(() => {
+		// Read scheme first to create dependency
+		const currentScheme = scheme;
+		if (particles) {
+			particles.updateScheme(currentScheme);
+		}
+	});
+</script>
+```
+
+**Why:** JavaScript short-circuits optional chaining. If `particles`
+is nullish, `scheme` is never evaluated, so no dependency is created.
+
+---
+
+### 4. Creating Infinite Loops in $effect ❌
 
 **WRONG:**
 

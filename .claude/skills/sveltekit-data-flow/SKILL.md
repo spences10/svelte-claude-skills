@@ -44,22 +44,20 @@ export const actions = {
 
 ## Reference Files
 
-- [references/load-functions.md](references/load-functions.md) -
-  Server vs universal loads
-- [references/form-actions.md](references/form-actions.md) - Form
-  handling patterns
-- [references/serialization.md](references/serialization.md) - What
-  can/can't serialize
-- [references/error-redirect-handling.md](references/error-redirect-handling.md) -
-  fail(), redirect(), error()
+- [load-functions.md](references/load-functions.md) - Server vs
+  universal
+- [form-actions.md](references/form-actions.md) - Form handling
+  patterns
+- [serialization.md](references/serialization.md) - What can/can't
+  serialize
+- [error-redirect-handling.md](references/error-redirect-handling.md) -
+  fail/redirect/error
 
 ## Notes
 
-- Server load output is automatically passed to universal load as
-  `data` parameter
-- ALWAYS rethrow redirects/errors: `throw redirect()`, `throw error()`
-- Don't return class instances or functions from server load (not
-  serializable)
+- Server load → universal load via `data` param | ALWAYS
+  `throw redirect()/error()`
+- No class instances/functions from server load (not serializable)
 - **Last verified:** 2025-01-11
 
 <!--
