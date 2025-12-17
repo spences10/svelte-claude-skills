@@ -1,5 +1,22 @@
 # Remote Functions Detailed Guide
 
+## Contents
+
+- Overview
+- Configuration (Experimental)
+- Async Svelte Integration
+- Available Functions (command, query, form, prerender)
+- Validation
+- Serialization Rules
+- Access Request Context
+- Error Handling
+- File Naming Convention
+- Performance Tips
+- Caching Strategies
+- Common Patterns
+- TypeScript Tips
+- Comparison with Traditional Approaches
+
 ## Overview
 
 Remote functions (`command()`, `query()`, `form()`, `prerender()`)
