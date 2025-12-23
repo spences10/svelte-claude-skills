@@ -1,5 +1,8 @@
 # Svelte Claude Skills
 
+[![Run in Smithery](https://smithery.ai/badge/skills/spences10)](https://smithery.ai/skills?ns=spences10&utm_source=github&utm_medium=badge)
+
+
 A curated collection of [Claude Code](https://claude.com/claude-code)
 skills for Svelte 5 and SvelteKit development. These skills provide
 context-aware guidance, best practices, and common patterns to help
