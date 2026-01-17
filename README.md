@@ -213,6 +213,24 @@ guidelines:
 - [Claude Code Documentation](https://docs.claude.com/en/docs/claude-code)
 - [Svelte 5 Migration Guide](https://svelte.dev/docs/svelte/v5-migration-guide)
 
+## Skills Ecosystem
+
+| Project | Purpose |
+|---------|---------|
+| [claude-code-toolkit](https://github.com/spences10/claude-code-toolkit) | Performance, productivity, ecosystem tools |
+| [svelte-skills-kit](https://github.com/spences10/svelte-skills-kit) | Svelte 5 & SvelteKit skills marketplace |
+| [claude-skills-cli](https://github.com/spences10/claude-skills-cli) | CLI for creating skills with validation |
+| [svelte-claude-skills](https://github.com/spences10/svelte-claude-skills) | Original Svelte skills collection |
+
+## Tools Ecosystem
+
+| Project | Purpose |
+|---------|---------|
+| [mcp-omnisearch](https://github.com/spences10/mcp-omnisearch) | Unified search MCP (Tavily, Kagi, GitHub) |
+| [mcp-sqlite-tools](https://github.com/spences10/mcp-sqlite-tools) | Safe SQLite operations MCP |
+| [mcpick](https://github.com/spences10/mcpick) | Dynamic MCP server toggling |
+| [cclog](https://github.com/spences10/cclog) | Claude Code transcript → SQLite |
+
 ## License
 
 MIT
