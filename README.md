@@ -1,6 +1,7 @@
 # Svelte Claude Skills
 
 [![Run in Smithery](https://smithery.ai/badge/skills/spences10)](https://smithery.ai/skills?ns=spences10&utm_source=github&utm_medium=badge)
+[![SkillCheck](https://img.shields.io/badge/SkillCheck-PASS-brightgreen?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik05IDE2LjE3TDQuODMgMTJsLTEuNDIgMS40MUw5IDE5IDIxIDdsLTEuNDEtMS40MXoiLz48L3N2Zz4=)](https://getskillcheck.com)
 
 
 A curated collection of [Claude Code](https://claude.com/claude-code)
