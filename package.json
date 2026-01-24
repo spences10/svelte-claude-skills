@@ -51,6 +51,6 @@
 		"vitest-browser-svelte": "^2.0.1"
 	},
 	"dependencies": {
-		"@anthropic-ai/claude-agent-sdk": "^0.1.72"
+		"@anthropic-ai/claude-agent-sdk": "^0.2.0"
 	}
 }
