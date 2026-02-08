@@ -1,0 +1,1320 @@
+[
+  {
+    "hook_config": "none",
+    "total_tests": 22,
+    "activated_count": 11,
+    "correct_count": 11,
+    "activation_rate": 0.5,
+    "accuracy_rate": 0.5,
+    "avg_latency_ms": 9419.954545454546,
+    "results": [
+      {
+        "test_id": "act-001",
+        "hook_config": "none",
+        "query": "How do I use $state in Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6271
+      },
+      {
+        "test_id": "act-002",
+        "hook_config": "none",
+        "query": "How do I create reactive state with $derived?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 11916
+      },
+      {
+        "test_id": "act-003",
+        "hook_config": "none",
+        "query": "How do I use $effect for side effects?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 11583
+      },
+      {
+        "test_id": "act-004",
+        "hook_config": "none",
+        "query": "How do I create bindable props in Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 12020
+      },
+      {
+        "test_id": "act-005",
+        "hook_config": "none",
+        "query": "How do I migrate from Svelte 4 to Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6484
+      },
+      {
+        "test_id": "act-006",
+        "hook_config": "none",
+        "query": "How do I create a load function in SvelteKit?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6014
+      },
+      {
+        "test_id": "act-007",
+        "hook_config": "none",
+        "query": "How do form actions work in SvelteKit?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 17344
+      },
+      {
+        "test_id": "act-008",
+        "hook_config": "none",
+        "query": "What can I return from a server load function?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 15406
+      },
+      {
+        "test_id": "act-009",
+        "hook_config": "none",
+        "query": "How do I use fail() in a form action?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7266
+      },
+      {
+        "test_id": "act-010",
+        "hook_config": "none",
+        "query": "When should I use +page.server.ts vs +page.ts?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5691
+      },
+      {
+        "test_id": "act-011",
+        "hook_config": "none",
+        "query": "How does file-based routing work in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 16083
+      },
+      {
+        "test_id": "act-012",
+        "hook_config": "none",
+        "query": "How do I create nested layouts in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6613
+      },
+      {
+        "test_id": "act-013",
+        "hook_config": "none",
+        "query": "Where do I put error boundaries in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 4998
+      },
+      {
+        "test_id": "act-014",
+        "hook_config": "none",
+        "query": "How do I handle SSR in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 14218
+      },
+      {
+        "test_id": "act-015",
+        "hook_config": "none",
+        "query": "What is the difference between +page.svelte and +layout.svelte?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 12331
+      },
+      {
+        "test_id": "act-016",
+        "hook_config": "none",
+        "query": "How do I use command() in SvelteKit?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6089
+      },
+      {
+        "test_id": "act-017",
+        "hook_config": "none",
+        "query": "How do I create a remote function with query()?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5929
+      },
+      {
+        "test_id": "act-018",
+        "hook_config": "none",
+        "query": "What are .remote.ts files in SvelteKit?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5611
+      },
+      {
+        "test_id": "act-019",
+        "hook_config": "none",
+        "query": "How do I call server functions from a Svelte component?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 8652
+      },
+      {
+        "test_id": "act-020",
+        "hook_config": "none",
+        "query": "How do I validate input in remote functions?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 6216
+      },
+      {
+        "test_id": "act-021",
+        "hook_config": "none",
+        "query": "How do I use $state in a form action?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes",
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6294
+      },
+      {
+        "test_id": "act-022",
+        "hook_config": "none",
+        "query": "How do I load data for my Svelte 5 component?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 14210
+      }
+    ]
+  },
+  {
+    "hook_config": "simple",
+    "total_tests": 22,
+    "activated_count": 11,
+    "correct_count": 11,
+    "activation_rate": 0.5,
+    "accuracy_rate": 0.5,
+    "avg_latency_ms": 9174.227272727272,
+    "results": [
+      {
+        "test_id": "act-001",
+        "hook_config": "simple",
+        "query": "How do I use $state in Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5864
+      },
+      {
+        "test_id": "act-002",
+        "hook_config": "simple",
+        "query": "How do I create reactive state with $derived?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 11035
+      },
+      {
+        "test_id": "act-003",
+        "hook_config": "simple",
+        "query": "How do I use $effect for side effects?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5939
+      },
+      {
+        "test_id": "act-004",
+        "hook_config": "simple",
+        "query": "How do I create bindable props in Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 10435
+      },
+      {
+        "test_id": "act-005",
+        "hook_config": "simple",
+        "query": "How do I migrate from Svelte 4 to Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5629
+      },
+      {
+        "test_id": "act-006",
+        "hook_config": "simple",
+        "query": "How do I create a load function in SvelteKit?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 12397
+      },
+      {
+        "test_id": "act-007",
+        "hook_config": "simple",
+        "query": "How do form actions work in SvelteKit?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 13835
+      },
+      {
+        "test_id": "act-008",
+        "hook_config": "simple",
+        "query": "What can I return from a server load function?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 12397
+      },
+      {
+        "test_id": "act-009",
+        "hook_config": "simple",
+        "query": "How do I use fail() in a form action?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 12665
+      },
+      {
+        "test_id": "act-010",
+        "hook_config": "simple",
+        "query": "When should I use +page.server.ts vs +page.ts?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5319
+      },
+      {
+        "test_id": "act-011",
+        "hook_config": "simple",
+        "query": "How does file-based routing work in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 15314
+      },
+      {
+        "test_id": "act-012",
+        "hook_config": "simple",
+        "query": "How do I create nested layouts in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 15665
+      },
+      {
+        "test_id": "act-013",
+        "hook_config": "simple",
+        "query": "Where do I put error boundaries in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5525
+      },
+      {
+        "test_id": "act-014",
+        "hook_config": "simple",
+        "query": "How do I handle SSR in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5765
+      },
+      {
+        "test_id": "act-015",
+        "hook_config": "simple",
+        "query": "What is the difference between +page.svelte and +layout.svelte?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 12004
+      },
+      {
+        "test_id": "act-016",
+        "hook_config": "simple",
+        "query": "How do I use command() in SvelteKit?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5604
+      },
+      {
+        "test_id": "act-017",
+        "hook_config": "simple",
+        "query": "How do I create a remote function with query()?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5648
+      },
+      {
+        "test_id": "act-018",
+        "hook_config": "simple",
+        "query": "What are .remote.ts files in SvelteKit?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5720
+      },
+      {
+        "test_id": "act-019",
+        "hook_config": "simple",
+        "query": "How do I call server functions from a Svelte component?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 11288
+      },
+      {
+        "test_id": "act-020",
+        "hook_config": "simple",
+        "query": "How do I validate input in remote functions?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5444
+      },
+      {
+        "test_id": "act-021",
+        "hook_config": "simple",
+        "query": "How do I use $state in a form action?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes",
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6144
+      },
+      {
+        "test_id": "act-022",
+        "hook_config": "simple",
+        "query": "How do I load data for my Svelte 5 component?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 12197
+      }
+    ]
+  },
+  {
+    "hook_config": "forced-eval",
+    "total_tests": 22,
+    "activated_count": 22,
+    "correct_count": 22,
+    "activation_rate": 1,
+    "accuracy_rate": 1,
+    "avg_latency_ms": 8309.59090909091,
+    "results": [
+      {
+        "test_id": "act-001",
+        "hook_config": "forced-eval",
+        "query": "How do I use $state in Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8165
+      },
+      {
+        "test_id": "act-002",
+        "hook_config": "forced-eval",
+        "query": "How do I create reactive state with $derived?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7722
+      },
+      {
+        "test_id": "act-003",
+        "hook_config": "forced-eval",
+        "query": "How do I use $effect for side effects?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8082
+      },
+      {
+        "test_id": "act-004",
+        "hook_config": "forced-eval",
+        "query": "How do I create bindable props in Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8929
+      },
+      {
+        "test_id": "act-005",
+        "hook_config": "forced-eval",
+        "query": "How do I migrate from Svelte 4 to Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7523
+      },
+      {
+        "test_id": "act-006",
+        "hook_config": "forced-eval",
+        "query": "How do I create a load function in SvelteKit?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8132
+      },
+      {
+        "test_id": "act-007",
+        "hook_config": "forced-eval",
+        "query": "How do form actions work in SvelteKit?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8075
+      },
+      {
+        "test_id": "act-008",
+        "hook_config": "forced-eval",
+        "query": "What can I return from a server load function?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 9511
+      },
+      {
+        "test_id": "act-009",
+        "hook_config": "forced-eval",
+        "query": "How do I use fail() in a form action?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7940
+      },
+      {
+        "test_id": "act-010",
+        "hook_config": "forced-eval",
+        "query": "When should I use +page.server.ts vs +page.ts?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow",
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 9722
+      },
+      {
+        "test_id": "act-011",
+        "hook_config": "forced-eval",
+        "query": "How does file-based routing work in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7403
+      },
+      {
+        "test_id": "act-012",
+        "hook_config": "forced-eval",
+        "query": "How do I create nested layouts in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8909
+      },
+      {
+        "test_id": "act-013",
+        "hook_config": "forced-eval",
+        "query": "Where do I put error boundaries in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8410
+      },
+      {
+        "test_id": "act-014",
+        "hook_config": "forced-eval",
+        "query": "How do I handle SSR in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8242
+      },
+      {
+        "test_id": "act-015",
+        "hook_config": "forced-eval",
+        "query": "What is the difference between +page.svelte and +layout.svelte?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7306
+      },
+      {
+        "test_id": "act-016",
+        "hook_config": "forced-eval",
+        "query": "How do I use command() in SvelteKit?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7844
+      },
+      {
+        "test_id": "act-017",
+        "hook_config": "forced-eval",
+        "query": "How do I create a remote function with query()?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8967
+      },
+      {
+        "test_id": "act-018",
+        "hook_config": "forced-eval",
+        "query": "What are .remote.ts files in SvelteKit?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8484
+      },
+      {
+        "test_id": "act-019",
+        "hook_config": "forced-eval",
+        "query": "How do I call server functions from a Svelte component?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-data-flow",
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8210
+      },
+      {
+        "test_id": "act-020",
+        "hook_config": "forced-eval",
+        "query": "How do I validate input in remote functions?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8483
+      },
+      {
+        "test_id": "act-021",
+        "hook_config": "forced-eval",
+        "query": "How do I use $state in a form action?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes",
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8207
+      },
+      {
+        "test_id": "act-022",
+        "hook_config": "forced-eval",
+        "query": "How do I load data for my Svelte 5 component?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8545
+      }
+    ]
+  },
+  {
+    "hook_config": "llm-eval",
+    "total_tests": 22,
+    "activated_count": 22,
+    "correct_count": 22,
+    "activation_rate": 1,
+    "accuracy_rate": 1,
+    "avg_latency_ms": 6755,
+    "results": [
+      {
+        "test_id": "act-001",
+        "hook_config": "llm-eval",
+        "query": "How do I use $state in Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6427
+      },
+      {
+        "test_id": "act-002",
+        "hook_config": "llm-eval",
+        "query": "How do I create reactive state with $derived?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 9342
+      },
+      {
+        "test_id": "act-003",
+        "hook_config": "llm-eval",
+        "query": "How do I use $effect for side effects?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6910
+      },
+      {
+        "test_id": "act-004",
+        "hook_config": "llm-eval",
+        "query": "How do I create bindable props in Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6560
+      },
+      {
+        "test_id": "act-005",
+        "hook_config": "llm-eval",
+        "query": "How do I migrate from Svelte 4 to Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes",
+          "research"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6477
+      },
+      {
+        "test_id": "act-006",
+        "hook_config": "llm-eval",
+        "query": "How do I create a load function in SvelteKit?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5610
+      },
+      {
+        "test_id": "act-007",
+        "hook_config": "llm-eval",
+        "query": "How do form actions work in SvelteKit?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6242
+      },
+      {
+        "test_id": "act-008",
+        "hook_config": "llm-eval",
+        "query": "What can I return from a server load function?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5996
+      },
+      {
+        "test_id": "act-009",
+        "hook_config": "llm-eval",
+        "query": "How do I use fail() in a form action?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5958
+      },
+      {
+        "test_id": "act-010",
+        "hook_config": "llm-eval",
+        "query": "When should I use +page.server.ts vs +page.ts?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 5962
+      },
+      {
+        "test_id": "act-011",
+        "hook_config": "llm-eval",
+        "query": "How does file-based routing work in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7220
+      },
+      {
+        "test_id": "act-012",
+        "hook_config": "llm-eval",
+        "query": "How do I create nested layouts in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6730
+      },
+      {
+        "test_id": "act-013",
+        "hook_config": "llm-eval",
+        "query": "Where do I put error boundaries in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6185
+      },
+      {
+        "test_id": "act-014",
+        "hook_config": "llm-eval",
+        "query": "How do I handle SSR in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6083
+      },
+      {
+        "test_id": "act-015",
+        "hook_config": "llm-eval",
+        "query": "What is the difference between +page.svelte and +layout.svelte?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6106
+      },
+      {
+        "test_id": "act-016",
+        "hook_config": "llm-eval",
+        "query": "How do I use command() in SvelteKit?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6740
+      },
+      {
+        "test_id": "act-017",
+        "hook_config": "llm-eval",
+        "query": "How do I create a remote function with query()?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7387
+      },
+      {
+        "test_id": "act-018",
+        "hook_config": "llm-eval",
+        "query": "What are .remote.ts files in SvelteKit?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8738
+      },
+      {
+        "test_id": "act-019",
+        "hook_config": "llm-eval",
+        "query": "How do I call server functions from a Svelte component?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions",
+          "sveltekit-data-flow",
+          "svelte-components"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7486
+      },
+      {
+        "test_id": "act-020",
+        "hook_config": "llm-eval",
+        "query": "How do I validate input in remote functions?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions",
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6825
+      },
+      {
+        "test_id": "act-021",
+        "hook_config": "llm-eval",
+        "query": "How do I use $state in a form action?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes",
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6579
+      },
+      {
+        "test_id": "act-022",
+        "hook_config": "llm-eval",
+        "query": "How do I load data for my Svelte 5 component?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow",
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7047
+      }
+    ]
+  },
+  {
+    "hook_config": "type-prompt",
+    "total_tests": 22,
+    "activated_count": 9,
+    "correct_count": 9,
+    "activation_rate": 0.4090909090909091,
+    "accuracy_rate": 0.4090909090909091,
+    "avg_latency_ms": 28099.545454545456,
+    "results": [
+      {
+        "test_id": "act-001",
+        "hook_config": "type-prompt",
+        "query": "How do I use $state in Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7887
+      },
+      {
+        "test_id": "act-002",
+        "hook_config": "type-prompt",
+        "query": "How do I create reactive state with $derived?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 14385
+      },
+      {
+        "test_id": "act-003",
+        "hook_config": "type-prompt",
+        "query": "How do I use $effect for side effects?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 14681
+      },
+      {
+        "test_id": "act-004",
+        "hook_config": "type-prompt",
+        "query": "How do I create bindable props in Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 12325
+      },
+      {
+        "test_id": "act-005",
+        "hook_config": "type-prompt",
+        "query": "How do I migrate from Svelte 4 to Svelte 5?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6460
+      },
+      {
+        "test_id": "act-006",
+        "hook_config": "type-prompt",
+        "query": "How do I create a load function in SvelteKit?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 12922
+      },
+      {
+        "test_id": "act-007",
+        "hook_config": "type-prompt",
+        "query": "How do form actions work in SvelteKit?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6890
+      },
+      {
+        "test_id": "act-008",
+        "hook_config": "type-prompt",
+        "query": "What can I return from a server load function?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 5551
+      },
+      {
+        "test_id": "act-009",
+        "hook_config": "type-prompt",
+        "query": "How do I use fail() in a form action?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 17450
+      },
+      {
+        "test_id": "act-010",
+        "hook_config": "type-prompt",
+        "query": "When should I use +page.server.ts vs +page.ts?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6956
+      },
+      {
+        "test_id": "act-011",
+        "hook_config": "type-prompt",
+        "query": "How does file-based routing work in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 25494
+      },
+      {
+        "test_id": "act-012",
+        "hook_config": "type-prompt",
+        "query": "How do I create nested layouts in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 370975,
+        "error": "read ETIMEDOUT"
+      },
+      {
+        "test_id": "act-013",
+        "hook_config": "type-prompt",
+        "query": "Where do I put error boundaries in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [
+          "sveltekit-structure"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7561
+      },
+      {
+        "test_id": "act-014",
+        "hook_config": "type-prompt",
+        "query": "How do I handle SSR in SvelteKit?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 15846
+      },
+      {
+        "test_id": "act-015",
+        "hook_config": "type-prompt",
+        "query": "What is the difference between +page.svelte and +layout.svelte?",
+        "expected_skill": "sveltekit-structure",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 14652
+      },
+      {
+        "test_id": "act-016",
+        "hook_config": "type-prompt",
+        "query": "How do I use command() in SvelteKit?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7756
+      },
+      {
+        "test_id": "act-017",
+        "hook_config": "type-prompt",
+        "query": "How do I create a remote function with query()?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 6936
+      },
+      {
+        "test_id": "act-018",
+        "hook_config": "type-prompt",
+        "query": "What are .remote.ts files in SvelteKit?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [
+          "sveltekit-remote-functions"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 7601
+      },
+      {
+        "test_id": "act-019",
+        "hook_config": "type-prompt",
+        "query": "How do I call server functions from a Svelte component?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 8877
+      },
+      {
+        "test_id": "act-020",
+        "hook_config": "type-prompt",
+        "query": "How do I validate input in remote functions?",
+        "expected_skill": "sveltekit-remote-functions",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 21166
+      },
+      {
+        "test_id": "act-021",
+        "hook_config": "type-prompt",
+        "query": "How do I use $state in a form action?",
+        "expected_skill": "svelte-runes",
+        "activated_skills": [
+          "svelte-runes",
+          "sveltekit-data-flow"
+        ],
+        "activated": true,
+        "correct": true,
+        "latency_ms": 8905
+      },
+      {
+        "test_id": "act-022",
+        "hook_config": "type-prompt",
+        "query": "How do I load data for my Svelte 5 component?",
+        "expected_skill": "sveltekit-data-flow",
+        "activated_skills": [],
+        "activated": false,
+        "correct": false,
+        "latency_ms": 16914
+      }
+    ]
+  }
+]
