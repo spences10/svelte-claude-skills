@@ -7,7 +7,7 @@
 		"test:single": "tsx src/main.ts --config"
 	},
 	"dependencies": {
-		"@daytonaio/sdk": "^0.140.0"
+		"@daytonaio/sdk": "^0.141.0"
 	},
 	"devDependencies": {
 		"tsx": "^4.19.0",
