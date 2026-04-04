@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@anthropic-ai/claude-agent-sdk':
         specifier: ^0.2.76
-        version: 0.2.90(zod@4.3.6)
+        version: 0.2.92(zod@4.3.6)
     devDependencies:
       '@eslint/compat':
         specifier: ^2.0.3
@@ -108,14 +108,14 @@ importers:
 
 packages:
 
-  '@anthropic-ai/claude-agent-sdk@0.2.90':
-    resolution: {integrity: sha512-up5bK0pUbthKIZtNE18WDrIYi0KNpZUhdgjGbkfH/mFQJxI6W/uE3mTiLrCX3UF0SqNl0fMtojBTZPJr2b3O4g==}
+  '@anthropic-ai/claude-agent-sdk@0.2.92':
+    resolution: {integrity: sha512-loYyxVUC5gBwHjGi9Fv0b84mduJTp9Z3Pum+y/7IVQDb4NynKfVQl6l4VeDKZaW+1QTQtd25tY4hwUznD7Krqw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       zod: ^4.0.0
 
-  '@anthropic-ai/sdk@0.74.0':
-    resolution: {integrity: sha512-srbJV7JKsc5cQ6eVuFzjZO7UR3xEPJqPamHFIe29bs38Ij2IripoAhC0S5NslNbaFUYqBKypmmpzMTpqfHEUDw==}
+  '@anthropic-ai/sdk@0.80.0':
+    resolution: {integrity: sha512-WeXLn7zNVk3yjeshn+xZHvld6AoFUOR3Sep6pSoHho5YbSi6HwcirqgPA5ccFuW8QTVJAAU7N8uQQC6Wa9TG+g==}
     hasBin: true
     peerDependencies:
       zod: ^3.25.0 || ^4.0.0
@@ -2186,9 +2186,9 @@ packages:
 
 snapshots:
 
-  '@anthropic-ai/claude-agent-sdk@0.2.90(zod@4.3.6)':
+  '@anthropic-ai/claude-agent-sdk@0.2.92(zod@4.3.6)':
     dependencies:
-      '@anthropic-ai/sdk': 0.74.0(zod@4.3.6)
+      '@anthropic-ai/sdk': 0.80.0(zod@4.3.6)
       '@modelcontextprotocol/sdk': 1.29.0(zod@4.3.6)
       zod: 4.3.6
     optionalDependencies:
@@ -2205,7 +2205,7 @@ snapshots:
       - '@cfworker/json-schema'
       - supports-color
 
-  '@anthropic-ai/sdk@0.74.0(zod@4.3.6)':
+  '@anthropic-ai/sdk@0.80.0(zod@4.3.6)':
     dependencies:
       json-schema-to-ts: 3.1.1
     optionalDependencies:
