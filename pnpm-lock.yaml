@@ -51,7 +51,7 @@ importers:
         version: 5.5.19
       mdsvex:
         specifier: ^0.12.7
-        version: 0.12.7(svelte@5.57.3(@typescript-eslint/types@8.57.2))
+        version: 0.12.8(svelte@5.57.3(@typescript-eslint/types@8.57.2))
       playwright:
         specifier: ^1.58.2
         version: 1.58.2
@@ -1680,8 +1680,8 @@ packages:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
     engines: {node: '>= 0.4'}
 
-  mdsvex@0.12.7:
-    resolution: {integrity: sha512-gx4bReLCUvq+MPErHXYeyX+TEq1hsS2KfiZtEOMNTcbibSouFy8AHc5h04KbGCl+g5tLuo4/lbgRVYRnc7bJZw==}
+  mdsvex@0.12.8:
+    resolution: {integrity: sha512-v2sbRA9QWf0tpYWfREI5Kq7OqqrqoUzfmMKbgdOoWGfPDLc1JYU4EgDDF0N9WFhmjFW5agKrYwo/mDVutBKWKw==}
     peerDependencies:
       svelte: ^3.56.0 || ^4.0.0 || ^5.0.0-next.120
 
@@ -3418,7 +3418,7 @@ snapshots:
 
   math-intrinsics@1.1.0: {}
 
-  mdsvex@0.12.7(svelte@5.57.3(@typescript-eslint/types@8.57.2)):
+  mdsvex@0.12.8(svelte@5.57.3(@typescript-eslint/types@8.57.2)):
     dependencies:
       '@types/mdast': 4.0.4
       '@types/unist': 2.0.11
