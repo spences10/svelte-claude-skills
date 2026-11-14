@@ -3,7 +3,7 @@
  */
 
 import { command } from '$app/server';
-import { db } from '$lib/server/eval-db';
+import { db } from '#lib/server/eval-db.ts';
 import * as v from 'valibot';
 import {
 	get_all_skill_versions,

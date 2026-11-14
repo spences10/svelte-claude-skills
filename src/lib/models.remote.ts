@@ -1,5 +1,5 @@
 import { command } from '$app/server';
-import { ANTHROPIC_API_KEY } from '$env/static/private';
+import { ANTHROPIC_API_KEY } from '$app/env/private';
 import * as v from 'valibot';
 
 if (ANTHROPIC_API_KEY) {

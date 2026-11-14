@@ -6,8 +6,8 @@ import { command } from '$app/server';
 import type {
 	ActivationTestResult,
 	QualityTestResult,
-} from '$lib/evals.remote';
-import { db } from '$lib/server/eval-db';
+} from '#lib/evals.remote.ts';
+import { db } from '#lib/server/eval-db.ts';
 import { randomUUID } from 'node:crypto';
 import * as v from 'valibot';
 

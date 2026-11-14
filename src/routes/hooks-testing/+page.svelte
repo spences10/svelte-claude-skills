@@ -4,7 +4,7 @@
 		get_test_runs,
 		run_single_test,
 		save_test_run,
-	} from '$lib/hooks-testing.remote';
+	} from '#lib/hooks-testing.remote.ts';
 	import { onMount } from 'svelte';
 
 	// Test configuration
@@ -113,8 +113,7 @@
 					id="prompt"
 					class="textarea-bordered textarea h-32"
 					bind:value={prompt}
-					disabled={is_running}
-				></textarea>
+					disabled={is_running}></textarea>
 			</div>
 
 			<div class="form-control mb-4">

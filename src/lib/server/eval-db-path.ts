@@ -1,4 +1,4 @@
-import { env } from '$env/dynamic/private';
+import { DATABASE_EVAL_PATH } from '$app/env/private';
 import path from 'node:path';
 
 /**
@@ -11,7 +11,7 @@ export const get_eval_database_path = (): string => {
 	const default_path = path.join(process.cwd(), 'data', 'evals.db');
 
 	// Allow override via env var for custom deployments
-	const db_path = env.DATABASE_EVAL_PATH || default_path;
+	const db_path = DATABASE_EVAL_PATH || default_path;
 
 	return db_path;
 };

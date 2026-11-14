@@ -1,7 +1,7 @@
 import type {
 	ActivationTestResult,
 	QualityTestResult,
-} from '$lib/evals.remote';
+} from '#lib/evals.remote.ts';
 
 /**
  * Get summary statistics for test results

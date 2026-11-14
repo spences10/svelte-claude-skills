@@ -4,13 +4,13 @@
 		run_quality_tests,
 		type ActivationTestResult,
 		type QualityTestResult,
-	} from '$lib/evals.remote';
+	} from '#lib/evals.remote.ts';
 	import {
 		activation_tests,
 		qualityTests,
-	} from '$lib/evals/test-cases';
-	import { get_test_summary } from '$lib/evals/utils';
-	import { fetch_available_models } from '$lib/models.remote';
+	} from '#lib/evals/test-cases.ts';
+	import { get_test_summary } from '#lib/evals/utils.ts';
+	import { fetch_available_models } from '#lib/models.remote.ts';
 	import { onMount } from 'svelte';
 
 	let activation_results = $state<ActivationTestResult[]>([]);

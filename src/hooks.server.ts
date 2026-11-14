@@ -1,6 +1,6 @@
-import { eval_db } from '$lib/server/eval-db';
-import { run_eval_migrations } from '$lib/server/eval-migrate';
-import type { Handle } from '@sveltejs/kit';
+import { eval_db } from '#lib/server/eval-db.ts';
+import { run_eval_migrations } from '#lib/server/eval-migrate.ts';
+import type { Handle } from '@sveltejs/kit/hooks';
 import { readFileSync } from 'node:fs';
 
 // Initialize schema on startup (gracefully handle errors for columns that don't exist yet)

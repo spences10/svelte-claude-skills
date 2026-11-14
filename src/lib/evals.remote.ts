@@ -1,5 +1,5 @@
 import { command } from '$app/server';
-import { ANTHROPIC_API_KEY } from '$env/static/private';
+import { ANTHROPIC_API_KEY } from '$app/env/private';
 import { query } from '@anthropic-ai/claude-agent-sdk';
 import * as v from 'valibot';
 import { calculate_cost } from './evals/cost-calculator';
@@ -152,7 +152,11 @@ export const test_skill_activation = command(
 						msg_usage.cache_creation_input_tokens || 0;
 					usage.cache_read_tokens +=
 						msg_usage.cache_read_input_tokens || 0;
-					if (msg_usage.thinking_tokens) {
+					if (
+						'thinking_tokens' in msg_usage &&
+						typeof msg_usage.thinking_tokens === 'number' &&
+						msg_usage.thinking_tokens
+					) {
 						usage.thinking_tokens =
 							(usage.thinking_tokens || 0) +
 							msg_usage.thinking_tokens;
@@ -301,7 +305,11 @@ export const test_response_quality = command(
 						msg_usage.cache_creation_input_tokens || 0;
 					usage.cache_read_tokens +=
 						msg_usage.cache_read_input_tokens || 0;
-					if (msg_usage.thinking_tokens) {
+					if (
+						'thinking_tokens' in msg_usage &&
+						typeof msg_usage.thinking_tokens === 'number' &&
+						msg_usage.thinking_tokens
+					) {
 						usage.thinking_tokens =
 							(usage.thinking_tokens || 0) +
 							msg_usage.thinking_tokens;

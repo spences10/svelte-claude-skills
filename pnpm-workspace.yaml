@@ -1,4 +1,12 @@
-onlyBuiltDependencies:
-  - '@tailwindcss/oxide'
-  - better-sqlite3
-  - esbuild
+allowBuilds:
+  '@tailwindcss/oxide': true
+  better-sqlite3: true
+  esbuild: true
+
+overrides:
+  vite: npm:@voidzero-dev/vite-plus-core@1.6.0
+  vitest: 5.1.0
+
+peerDependencyRules:
+  allowedVersions:
+    vite: '1.6.0'

@@ -1,5 +1,5 @@
 import { command, query } from '$app/server';
-import { ANTHROPIC_API_KEY } from '$env/static/private';
+import { ANTHROPIC_API_KEY } from '$app/env/private';
 import { query as agent_query } from '@anthropic-ai/claude-agent-sdk';
 import Database from 'better-sqlite3';
 import { execSync } from 'child_process';
@@ -138,9 +138,13 @@ export const run_hook_tests = command(
 							}
 							if (
 								content.type === 'tool_use' &&
-								content.name === 'Skill'
+								content.name === 'Skill' &&
+								typeof content.input === 'object' &&
+								content.input !== null &&
+								'skill' in content.input &&
+								typeof content.input.skill === 'string'
 							) {
-								activated_skills.push(content.input?.skill);
+								activated_skills.push(content.input.skill);
 							}
 						}
 
@@ -375,9 +379,13 @@ export const run_single_test = command(
 						}
 						if (
 							content.type === 'tool_use' &&
-							content.name === 'Skill'
+							content.name === 'Skill' &&
+							typeof content.input === 'object' &&
+							content.input !== null &&
+							'skill' in content.input &&
+							typeof content.input.skill === 'string'
 						) {
-							activated_skills.push(content.input?.skill);
+							activated_skills.push(content.input.skill);
 						}
 					}
 
