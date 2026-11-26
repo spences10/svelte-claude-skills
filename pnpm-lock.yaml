@@ -48,7 +48,7 @@ importers:
         version: 12.8.0
       daisyui:
         specifier: ^5.5.19
-        version: 5.5.19
+        version: 5.8.3
       mdsvex:
         specifier: ^0.12.7
         version: 0.12.7(svelte@5.57.3(@typescript-eslint/types@8.57.2))
@@ -1249,8 +1249,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  daisyui@5.5.19:
-    resolution: {integrity: sha512-pbFAkl1VCEh/MPCeclKL61I/MqRIFFhNU7yiXoDDRapXN4/qNCoMxeCCswyxEEhqL5eiTTfwHvucFtOE71C9sA==}
+  daisyui@5.8.3:
+    resolution: {integrity: sha512-BCMsfKOgxxYWt4tYezGkn9VR/4IUqtnPFRSBvBjavI3n8sfk2t0CE1oGk4yQJSsd5x6beT1oGZt/WUvVeEP40g==}
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -3038,7 +3038,7 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  daisyui@5.5.19: {}
+  daisyui@5.8.3: {}
 
   debug@4.4.3:
     dependencies:
